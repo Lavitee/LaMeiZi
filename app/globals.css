@@ -1062,6 +1062,13 @@ h3 {
   width: 156px;
 }
 
+.footer-logo-plate {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  padding: 8px 11px;
+}
+
 .footer-brand p {
   color: #fff;
 }

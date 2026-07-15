@@ -46,7 +46,9 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <img src={siteAsset("/images/restaurant/logo-lameizi-light.png")} alt="LaMeiZi Hot Pot & BBQ" />
+        <div className="footer-logo-plate">
+          <img src={siteAsset("/images/restaurant/logo-lameizi.png")} alt="LaMeiZi Hot Pot & BBQ" />
+        </div>
       </div>
       <div>
         <p className="footer-label">Visit</p>
