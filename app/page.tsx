@@ -3,8 +3,12 @@ import {
   directionsUrl,
   phoneDisplay,
   phoneUrl,
+  siteAsset,
+  sitePage,
   yelpUrl,
 } from "./site-data";
+
+export const dynamic = "force-static";
 
 export default function Home() {
   return (
@@ -61,17 +65,17 @@ export default function Home() {
             table, or enjoy both in one all-you-can-eat meal.
           </p>
           <div className="text-links">
-            <a href="/menu">Explore the menu</a>
-            <a href="/pricing">See pricing & dining terms</a>
+            <a href={sitePage("/menu")}>Explore the menu</a>
+            <a href={sitePage("/pricing")}>See pricing & dining terms</a>
           </div>
         </div>
         <div className="duo-images" aria-label="Hotpot and Korean barbecue">
           <figure>
-            <img src="/images/restaurant/seafood-hotpot.webp" alt="LaMeiZi hotpot spread" />
+          <img src={siteAsset("/images/restaurant/seafood-hotpot.webp")} alt="LaMeiZi hotpot spread" />
             <figcaption>Traditional Chinese Hotpot</figcaption>
           </figure>
           <figure>
-            <img src="/images/restaurant/meat-selection-premium.webp" alt="LaMeiZi Korean BBQ meat" />
+          <img src={siteAsset("/images/restaurant/meat-selection-premium.webp")} alt="LaMeiZi Korean BBQ meat" />
             <figcaption>Premium Korean BBQ</figcaption>
           </figure>
         </div>
@@ -79,7 +83,7 @@ export default function Home() {
 
       <section className="home-gallery-callout">
         <img
-          src="/images/restaurant/seafood-selection.webp"
+          src={siteAsset("/images/restaurant/seafood-selection.webp")}
           alt="Seafood, crab, shrimp, oysters, and hotpot at LaMeiZi"
         />
         <div>
@@ -89,7 +93,7 @@ export default function Home() {
             See the food, dining room, buffet, and table experience before you
             visit.
           </p>
-          <a className="button dark" href="/gallery">
+          <a className="button dark" href={sitePage("/gallery")}>
             View the Gallery
           </a>
         </div>
@@ -104,7 +108,7 @@ export default function Home() {
             ready as a gift.
           </p>
         </div>
-        <a className="button dark" href="/vip">
+          <a className="button dark" href={sitePage("/vip")}>
           See VIP Benefits
         </a>
       </section>
@@ -115,7 +119,7 @@ export default function Home() {
           <h2>Lunch, dinner, and late-night hotpot in Tampa</h2>
         </div>
         <div className="visit-cta-actions">
-          <a className="button primary" href="/visit">
+          <a className="button primary" href={sitePage("/visit")}>
             Hours & Directions
           </a>
           <a className="button outline" href={yelpUrl}>

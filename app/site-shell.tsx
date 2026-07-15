@@ -2,6 +2,8 @@ import {
   directionsUrl,
   phoneDisplay,
   phoneUrl,
+  siteAsset,
+  sitePage,
   yelpUrl,
 } from "./site-data";
 
@@ -19,14 +21,14 @@ export function SiteHeader({ current }: { current: string }) {
     <header className="site-header" aria-label="Primary navigation">
       {/* The plain anchor keeps Vinext's local HMR navigation stable. */}
       {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-      <a className="brand-lockup" href="/" aria-label="LaMeiZi home">
-        <img src="/images/restaurant/logo-lameizi.png" alt="LaMeiZi Hot Pot & BBQ" />
+      <a className="brand-lockup" href={sitePage("/")} aria-label="LaMeiZi home">
+        <img src={siteAsset("/images/restaurant/logo-lameizi.png")} alt="LaMeiZi Hot Pot & BBQ" />
       </a>
       <nav aria-label="Main menu">
         {navigation.map((item) => (
           <a
             className={current === item.id ? "active" : undefined}
-            href={item.href}
+            href={sitePage(item.href)}
             key={item.id}
           >
             {item.label}
@@ -44,7 +46,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <img src="/images/restaurant/logo-lameizi-light.png" alt="LaMeiZi Hot Pot & BBQ" />
+        <img src={siteAsset("/images/restaurant/logo-lameizi-light.png")} alt="LaMeiZi Hot Pot & BBQ" />
       </div>
       <div>
         <p className="footer-label">Visit</p>
@@ -75,7 +77,7 @@ export function PageHero({
   return (
     <section
       className="page-hero"
-      style={{ "--page-image": `url(${image})` } as React.CSSProperties}
+      style={{ "--page-image": `url(${siteAsset(image)})` } as React.CSSProperties}
     >
       <div>
         <p className="eyebrow">{eyebrow}</p>

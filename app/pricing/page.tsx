@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 import { yelpUrl } from "../site-data";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Pricing | LaMeiZi Hot Pot & BBQ",
   description:

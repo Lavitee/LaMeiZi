@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-import { galleryPhotos } from "../site-data";
+import { galleryPhotos, siteAsset } from "../site-data";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Gallery | LaMeiZi Hot Pot & BBQ",
@@ -27,7 +29,7 @@ export default function GalleryPage() {
         <div className="photo-grid">
           {galleryPhotos.map((photo) => (
             <figure className={photo.className} key={photo.src}>
-              <img src={photo.src} alt={photo.alt} />
+              <img src={siteAsset(photo.src)} alt={photo.alt} />
               <figcaption>{photo.caption}</figcaption>
             </figure>
           ))}

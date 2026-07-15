@@ -3,6 +3,8 @@ import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 import { phoneDisplay, phoneUrl, vipTiers } from "../site-data";
 import { VipTierSelector } from "../vip-tier-selector";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "VIP + Gift Cards | LaMeiZi Hot Pot & BBQ",
   description:
