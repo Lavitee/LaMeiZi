@@ -333,6 +333,19 @@ h3 {
   margin: 22px 0 0;
 }
 
+.reserve-transition-link {
+  background: var(--red);
+  color: #fff;
+  display: inline-flex;
+  font-weight: 800;
+  margin-top: 24px;
+  padding: 14px 20px;
+}
+
+.reserve-transition-link:hover {
+  filter: brightness(1.08);
+}
+
 @keyframes reserve-spin {
   to {
     transform: rotate(360deg);
