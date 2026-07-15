@@ -7,6 +7,8 @@ import {
   yelpUrl,
 } from "../site-data";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Visit | LaMeiZi Hot Pot & BBQ",
   description:
