@@ -38,12 +38,12 @@ jobs:
         run: pnpm run build:pages
         env:
           GITHUB_PAGES_BASE_PATH: ""
-          NEXT_PUBLIC_BASE_PATH: /LaMeiZi
+          NEXT_PUBLIC_BASE_PATH: ""
 
       - name: Prefix generated assets
         run: pnpm run prepare:pages
         env:
-          NEXT_PUBLIC_BASE_PATH: /LaMeiZi
+          NEXT_PUBLIC_BASE_PATH: ""
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
