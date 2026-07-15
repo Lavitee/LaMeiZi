@@ -1,6 +1,18 @@
 export const yelpUrl =
   "https://www.yelp.com/biz/lameizi-hotpot-and-bbq-tampa";
 
+export const siteBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function siteAsset(path: string): string {
+  return `${siteBasePath}${path}`;
+}
+
+export function sitePage(path: string): string {
+  if (!siteBasePath) return path;
+  if (path === "/") return `${siteBasePath}/`;
+  return `${siteBasePath}${path}.html`;
+}
+
 export const directionsUrl =
   "https://www.google.com/maps/search/?api=1&query=2501%20E%20Fowler%20Ave%2C%20Tampa%20FL%2033612";
 
