@@ -1,11 +1,11 @@
 import { SiteFooter, SiteHeader } from "./site-shell";
+import { ReserveLink } from "./reserve-link";
 import {
   directionsUrl,
   phoneDisplay,
   phoneUrl,
   siteAsset,
   sitePage,
-  yelpUrl,
 } from "./site-data";
 
 export const dynamic = "force-static";
@@ -36,9 +36,9 @@ export default function Home() {
             table made for sharing.
           </p>
           <div className="button-row">
-            <a className="button primary" href={yelpUrl}>
+            <ReserveLink className="button primary">
               Reserve a Table
-            </a>
+            </ReserveLink>
             <a className="button light" href={phoneUrl}>
               Call {phoneDisplay}
             </a>
@@ -131,9 +131,9 @@ export default function Home() {
           <a className="button primary" href={sitePage("/visit")}>
             Hours & Directions
           </a>
-          <a className="button outline" href={yelpUrl}>
+          <ReserveLink className="button outline">
             Reserve on Yelp
-          </a>
+          </ReserveLink>
         </div>
       </section>
 
