@@ -15,6 +15,11 @@ export default function ReservePage() {
   return (
     <main className="reserve-transition" role="status" aria-live="polite">
       <meta httpEquiv="refresh" content={`1;url=${yelpUrl}`} />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.setTimeout(function () { window.location.replace(${JSON.stringify(yelpUrl)}); }, 800);`,
+        }}
+      />
       <div className="reserve-transition-content">
         <div className="reserve-transition-logo">
           <img
