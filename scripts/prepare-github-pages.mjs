@@ -3,6 +3,7 @@ import path from "node:path";
 
 const outputDirectory = path.resolve("dist/client");
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/LaMeiZi";
+const assetPath = basePath ? `${basePath}/assets/` : "assets/";
 const textExtensions = new Set([".css", ".html", ".js", ".json", ".map", ".rsc"]);
 
 async function filesIn(directory) {
@@ -29,7 +30,7 @@ for (const filePath of await filesIn(outputDirectory)) {
   const source = await readFile(filePath, "utf8");
   const prefixed = source.replace(
     /(["'(=])\/assets\//g,
-    `$1${basePath}/assets/`,
+    `$1${assetPath}`,
   );
 
   if (prefixed !== source) {
