@@ -4,8 +4,8 @@ import {
   directionsUrl,
   phoneDisplay,
   phoneUrl,
-  yelpUrl,
 } from "../site-data";
+import { ReserveLink } from "../reserve-link";
 
 export const dynamic = "force-static";
 
@@ -35,9 +35,9 @@ export default function VisitPage() {
             <a className="button primary" href={directionsUrl}>
               Get Directions
             </a>
-            <a className="button outline" href={yelpUrl}>
+            <ReserveLink className="button outline">
               Reserve a Table
-            </a>
+            </ReserveLink>
           </div>
         </div>
         <div className="visit-details">
