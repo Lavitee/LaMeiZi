@@ -34,7 +34,7 @@ export function ReserveLink({ children, className, onClick, ...props }: ReserveL
     setIsLoading(true);
     window.setTimeout(() => {
       window.location.assign(yelpUrl);
-    }, 420);
+    }, 1200);
   }
 
   return (
