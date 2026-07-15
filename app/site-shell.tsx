@@ -4,8 +4,8 @@ import {
   phoneUrl,
   siteAsset,
   sitePage,
-  yelpUrl,
 } from "./site-data";
+import { ReserveLink } from "./reserve-link";
 
 const navigation = [
   { href: "/", label: "Home", id: "home" },
@@ -35,9 +35,9 @@ export function SiteHeader({ current }: { current: string }) {
           </a>
         ))}
       </nav>
-      <a className="header-reserve" href={yelpUrl}>
+      <ReserveLink className="header-reserve">
         Reserve
-      </a>
+      </ReserveLink>
     </header>
   );
 }
@@ -59,7 +59,7 @@ export function SiteFooter() {
       <div>
         <p className="footer-label">Contact</p>
         <a href={phoneUrl}>{phoneDisplay}</a>
-        <a href={yelpUrl}>Reserve on Yelp</a>
+        <ReserveLink>Reserve on Yelp</ReserveLink>
       </div>
     </footer>
   );
