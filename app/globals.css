@@ -1269,11 +1269,28 @@ h3 {
   }
 
   .category-item {
-    grid-template-columns: 1fr;
+    display: block;
+    overflow: hidden;
   }
 
   .category-item img {
     aspect-ratio: 16 / 9;
+    display: block;
+    height: auto;
+  }
+
+  .category-item div {
+    background: #fff;
+    padding: 22px 20px 24px;
+    position: static;
+  }
+
+  .category-item h3 {
+    color: var(--ink);
+  }
+
+  .category-item p {
+    color: #5c554f;
   }
 
   .photo-grid {
