@@ -31,6 +31,9 @@ export default function ReservePage() {
         <h1>Heading to Yelp</h1>
         <span className="reserve-spinner" aria-hidden="true" />
         <p>Opening the reservation page...</p>
+        <a className="reserve-transition-link" href={yelpUrl}>
+          Continue to Yelp
+        </a>
       </div>
     </main>
   );
