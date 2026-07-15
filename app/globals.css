@@ -276,6 +276,69 @@ h3 {
   filter: brightness(0.92);
 }
 
+.reserve-transition {
+  align-items: center;
+  background: var(--ink);
+  color: #fff;
+  display: grid;
+  inset: 0;
+  padding: 24px;
+  place-items: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.reserve-transition-content {
+  max-width: 620px;
+  text-align: center;
+}
+
+.reserve-transition-logo {
+  background: #fff;
+  display: inline-flex;
+  margin-bottom: 34px;
+  padding: 10px 14px;
+}
+
+.reserve-transition-logo img {
+  height: 78px;
+  object-fit: contain;
+  width: 138px;
+}
+
+.reserve-transition .eyebrow {
+  color: #ffe09a;
+  margin-bottom: 14px;
+}
+
+.reserve-transition h1 {
+  font-size: clamp(44px, 8vw, 84px);
+  line-height: 0.98;
+  margin-bottom: 28px;
+}
+
+.reserve-spinner {
+  animation: reserve-spin 900ms linear infinite;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  border-top-color: #d9a234;
+  display: inline-block;
+  height: 34px;
+  width: 34px;
+}
+
+.reserve-transition-content > p:last-child {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  margin: 22px 0 0;
+}
+
+@keyframes reserve-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .quick-facts {
   background: var(--jade);
   color: #fff;
