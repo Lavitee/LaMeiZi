@@ -79,8 +79,13 @@ export function PageHero({
   return (
     <section
       className="page-hero"
-      style={{ "--page-image": `url(${siteAsset(image)})` } as React.CSSProperties}
     >
+      <img
+        className="page-hero-image"
+        src={siteAsset(image)}
+        alt=""
+        fetchPriority="high"
+      />
       <div>
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
