@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-import { soupBases } from "../site-data";
+import { siteAsset, sitePage, soupBases } from "../site-data";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Menu | LaMeiZi Hot Pot & BBQ",
@@ -79,7 +81,7 @@ export default function MenuPage() {
           <div className="category-grid">
             {menuGroups.map((group) => (
               <article className="category-item" key={group.title}>
-                <img src={group.image} alt="" />
+                <img src={siteAsset(group.image)} alt="" />
                 <div>
                   <h3>{group.title}</h3>
                   <p>{group.description}</p>
@@ -95,7 +97,7 @@ export default function MenuPage() {
           <p className="eyebrow">All-you-can-eat</p>
           <h2>Hotpot, BBQ, or both</h2>
         </div>
-        <a className="button primary" href="/pricing">
+        <a className="button primary" href={sitePage("/pricing")}>
           View Pricing
         </a>
       </section>
