@@ -2,12 +2,18 @@ export const yelpUrl =
   "https://www.yelp.com/biz/lameizi-hotpot-and-bbq-tampa";
 
 export const siteBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const isStaticExport = process.env.GITHUB_PAGES === "true";
 
 export function siteAsset(path: string): string {
+  if (isStaticExport) return path.replace(/^\/+/, "");
   return `${siteBasePath}${path}`;
 }
 
 export function sitePage(path: string): string {
+  if (isStaticExport) {
+    if (path === "/") return "./";
+    return `${path.replace(/^\/+/, "")}.html`;
+  }
   if (!siteBasePath) return path;
   if (path === "/") return `${siteBasePath}/`;
   return `${siteBasePath}${path}.html`;
