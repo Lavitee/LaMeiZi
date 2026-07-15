@@ -18,12 +18,13 @@ export default function Home() {
       <section
         className="home-hero"
         aria-label="LaMeiZi Hot Pot and BBQ"
-        style={
-          {
-            "--hero-image": `url(${siteAsset("/images/restaurant/homepage-hero.webp")})`,
-          } as React.CSSProperties
-        }
       >
+        <img
+          className="home-hero-image"
+          src={siteAsset("/images/restaurant/homepage-hero.webp")}
+          alt="LaMeiZi hotpot, barbecue, seafood, and fresh ingredients"
+          fetchPriority="high"
+        />
         <div className="home-hero-copy">
           <p className="eyebrow">Tampa all-you-can-eat hotpot & barbecue</p>
           <h1>
