@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GalleryLightbox } from "../gallery-lightbox";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 import { galleryPhotos, newUploadPhotos, siteAsset } from "../site-data";
 
@@ -29,7 +30,11 @@ export default function GalleryPage() {
         <div className="photo-grid">
           {galleryPhotos.map((photo) => (
             <figure className={photo.className} key={photo.src}>
-              <img src={siteAsset(photo.src)} alt={photo.alt} />
+              <GalleryLightbox
+                alt={photo.alt}
+                caption={photo.caption}
+                src={siteAsset(photo.src)}
+              />
               <figcaption>{photo.caption}</figcaption>
             </figure>
           ))}
