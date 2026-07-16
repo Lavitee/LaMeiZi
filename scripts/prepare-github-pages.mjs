@@ -31,6 +31,9 @@ for (const filePath of await filesIn(outputDirectory)) {
   const prefixed = source.replace(
     /(["'(=])\/assets\//g,
     `$1${assetPath}`,
+  ).replace(
+    /(["'(=])assets\//g,
+    `$1./assets/`,
   );
 
   if (prefixed !== source) {
