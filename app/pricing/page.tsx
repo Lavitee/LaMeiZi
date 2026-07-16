@@ -80,7 +80,7 @@ export default function PricingPage() {
             <p className="eyebrow">Kid price</p>
             <h2>Height-based pricing</h2>
             <p>
-              Prices shown are for hotpot or BBQ. Add $4.99 for both. Staff
+              Prices shown are for hotpot or BBQ. Add $4.00 for both. Staff
               determines height measurement.
             </p>
           </div>
