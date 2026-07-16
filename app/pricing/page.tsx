@@ -26,7 +26,7 @@ export default function PricingPage() {
         eyebrow="All-you-can-eat pricing"
         title="Pick hotpot, BBQ, or enjoy both"
         description="Straightforward pricing for the whole table, with a two-hour dining time."
-        image={newUploadPhotos.bbqPlatter}
+        image={newUploadPhotos.pricingBackground}
       />
 
       <section className="price-section content-width">
