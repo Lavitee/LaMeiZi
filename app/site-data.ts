@@ -38,6 +38,9 @@ export const newUploadPhotos = {
   koreanBbqFeature: "/images/new-uploads/Image_20260716190004_korean-bbq-feature.jpg",
   hotpotIngredientsFeature: "/images/new-uploads/Image_20260716190005_hotpot-ingredients-feature.jpg",
   pricingBackground: "/images/new-uploads/Image_20260716190006_pricing-background.jpg",
+  sushiSpecial: "/images/new-uploads/Image_20260716190007_sushi-special.jpg",
+  crawfishPot: "/images/new-uploads/Image_20260716190008_crawfish-pot.jpg",
+  salmonSashimiFresh: "/images/new-uploads/Image_20260716190009_salmon-sashimi.jpg",
   hotpotPlatter: "/images/new-uploads/Image_20260716170000_food-table-spread.jpg",
   seafoodPlatter: "/images/new-uploads/Image_20260715150607_462_568.jpg",
   exterior: "/images/new-uploads/Image_20260715150612_465_568.jpg",
@@ -152,6 +155,21 @@ export const galleryPhotos = [
     src: newUploadPhotos.sushiRolls,
     alt: "Sushi rolls prepared for the LaMeiZi table",
     caption: "Sushi rolls",
+  },
+  {
+    src: newUploadPhotos.sushiSpecial,
+    alt: "Salmon-topped sushi rolls prepared at LaMeiZi",
+    caption: "Sushi",
+  },
+  {
+    src: newUploadPhotos.crawfishPot,
+    alt: "Seasoned crawfish served at LaMeiZi",
+    caption: "Crawfish",
+  },
+  {
+    src: newUploadPhotos.salmonSashimiFresh,
+    alt: "Fresh salmon sashimi served at LaMeiZi",
+    caption: "Salmon sashimi",
   },
   {
     src: newUploadPhotos.hotpotPlatter,
