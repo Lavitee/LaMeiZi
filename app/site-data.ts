@@ -32,7 +32,7 @@ export const newUploadPhotos = {
   bbqPlatter: "/images/new-uploads/Image_20260715150554_454_568.jpg",
   meatPlatter: "/images/new-uploads/Image_20260715150558_456_568.jpg",
   seafoodClose: "/images/new-uploads/Image_20260715150601_458_568.jpg",
-  hotpotPlatter: "/images/new-uploads/Image_20260715150606_461_568.jpg",
+  hotpotPlatter: "/images/new-uploads/Image_20260716170000_food-table-spread.jpg",
   seafoodPlatter: "/images/new-uploads/Image_20260715150607_462_568.jpg",
   exterior: "/images/new-uploads/Image_20260715150612_465_568.jpg",
   exteriorAlt: "/images/new-uploads/Image_20260715150614_466_568.jpg",
@@ -121,8 +121,8 @@ export const soupBases = [
 export const galleryPhotos = [
   {
     src: newUploadPhotos.diningRoom,
-    alt: "LaMeiZi dining room with booths and red lanterns",
-    caption: "Inside LaMeiZi",
+    alt: "LaMeiZi dining room with karaoke screens and private booths",
+    caption: "Karaoke",
     className: "gallery-wide",
   },
   {
