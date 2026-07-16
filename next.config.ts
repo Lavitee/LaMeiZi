@@ -9,8 +9,10 @@ const nextConfig: NextConfig = {
   ...(isGitHubPagesBuild
     ? {
         output: "export" as const,
-        basePath: githubPagesBasePath,
-        assetPrefix: `${githubPagesAssetPrefix}/`,
+        ...(githubPagesBasePath ? { basePath: githubPagesBasePath } : {}),
+        ...(githubPagesAssetPrefix
+          ? { assetPrefix: `${githubPagesAssetPrefix}/` }
+          : {}),
       }
     : {}),
 };

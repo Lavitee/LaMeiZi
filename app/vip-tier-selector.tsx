@@ -40,7 +40,7 @@ export function VipTierSelector({
               role="option"
               type="button"
             >
-              <span>Load</span>
+              <span>Charge</span>
               <strong>{tier.amount}</strong>
               <div className="vip-tier-receive">
                 <small>Receive</small>

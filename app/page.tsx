@@ -1,11 +1,12 @@
 import { SiteFooter, SiteHeader } from "./site-shell";
+import { ReserveLink } from "./reserve-link";
 import {
   directionsUrl,
   phoneDisplay,
   phoneUrl,
+  newUploadPhotos,
   siteAsset,
   sitePage,
-  yelpUrl,
 } from "./site-data";
 
 export const dynamic = "force-static";
@@ -18,12 +19,13 @@ export default function Home() {
       <section
         className="home-hero"
         aria-label="LaMeiZi Hot Pot and BBQ"
-        style={
-          {
-            "--hero-image": `url(${siteAsset("/images/restaurant/homepage-hero.webp")})`,
-          } as React.CSSProperties
-        }
       >
+        <img
+          className="home-hero-image"
+          src={siteAsset("/images/restaurant/homepage-hero.webp")}
+          alt="LaMeiZi hotpot, barbecue, seafood, and fresh ingredients"
+          fetchPriority="high"
+        />
         <div className="home-hero-copy">
           <p className="eyebrow">Tampa all-you-can-eat hotpot & barbecue</p>
           <h1>
@@ -35,9 +37,9 @@ export default function Home() {
             table made for sharing.
           </p>
           <div className="button-row">
-            <a className="button primary" href={yelpUrl}>
+            <ReserveLink className="button primary">
               Reserve a Table
-            </a>
+            </ReserveLink>
             <a className="button light" href={phoneUrl}>
               Call {phoneDisplay}
             </a>
@@ -79,11 +81,11 @@ export default function Home() {
         </div>
         <div className="duo-images" aria-label="Hotpot and Korean barbecue">
           <figure>
-          <img src={siteAsset("/images/restaurant/seafood-hotpot.webp")} alt="LaMeiZi hotpot spread" />
+            <img src={siteAsset(newUploadPhotos.hotpotPlatter)} alt="LaMeiZi hotpot ingredients" />
             <figcaption>Traditional Chinese Hotpot</figcaption>
           </figure>
           <figure>
-          <img src={siteAsset("/images/restaurant/meat-selection-premium.webp")} alt="LaMeiZi Korean BBQ meat" />
+            <img src={siteAsset(newUploadPhotos.bbqPlatter)} alt="LaMeiZi Korean BBQ meats and seafood" />
             <figcaption>Premium Korean BBQ</figcaption>
           </figure>
         </div>
@@ -91,12 +93,12 @@ export default function Home() {
 
       <section className="home-gallery-callout">
         <img
-          src={siteAsset("/images/restaurant/seafood-selection.webp")}
-          alt="Seafood, crab, shrimp, oysters, and hotpot at LaMeiZi"
+          src={siteAsset(newUploadPhotos.crawfish)}
+          alt="Bright red crawfish prepared for the LaMeiZi table"
         />
         <div>
           <p className="eyebrow">More than the grill</p>
-          <h2>Starters, sushi, tea, smoothies & cocktails</h2>
+          <h2>Crawfish, sushi, tea & sweets</h2>
           <p>
             See the food, dining room, buffet, and table experience before you
             visit.
@@ -104,6 +106,30 @@ export default function Home() {
           <a className="button dark" href={sitePage("/gallery")}>
             View the Gallery
           </a>
+        </div>
+      </section>
+
+      <section className="home-broth-feature">
+        <div className="content-width home-broth-feature-layout">
+          <div className="home-broth-feature-copy">
+            <p className="eyebrow">Find your favorite broth</p>
+            <h2>Eight broths. One table.</h2>
+            <p>
+              Go bright with Tom Yum, settle into a restorative herbal broth,
+              or turn up the heat with our Sichuan red-oil soup. Everyone at
+              the table can find a favorite way to cook.
+            </p>
+            <a className="text-link" href={sitePage("/menu")}>
+              Explore all soup bases
+            </a>
+          </div>
+          <figure>
+            <img
+              src={siteAsset(newUploadPhotos.soupLineup)}
+              alt="A selection of LaMeiZi hotpot soup bases"
+            />
+            <figcaption>Choose a broth, then build the table around it.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -130,9 +156,9 @@ export default function Home() {
           <a className="button primary" href={sitePage("/visit")}>
             Hours & Directions
           </a>
-          <a className="button outline" href={yelpUrl}>
+          <ReserveLink className="button outline">
             Reserve on Yelp
-          </a>
+          </ReserveLink>
         </div>
       </section>
 

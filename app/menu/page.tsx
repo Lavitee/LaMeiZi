@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-import { siteAsset, sitePage, soupBases } from "../site-data";
+import { newUploadPhotos, siteAsset, sitePage, soupBases } from "../site-data";
 
 export const dynamic = "force-static";
 
@@ -15,25 +15,25 @@ const menuGroups = [
     title: "Korean BBQ",
     description:
       "Marinated meats, premium cuts, seafood, and fresh vegetables grilled at your table.",
-    image: "/images/restaurant/meat-selection-premium.webp",
+    image: newUploadPhotos.bbqPlatter,
   },
   {
     title: "Hotpot Ingredients",
     description:
       "Fresh meats, seafood, vegetables, noodles, tofu, and house dipping sauces for your broth.",
-    image: "/images/restaurant/seafood-hotpot.webp",
+    image: newUploadPhotos.hotpotPlatter,
   },
   {
-    title: "Starters & Sushi",
+    title: "Sushi & Seafood",
     description:
-      "Seafood boil, fried chicken wings, sushi, sashimi, and more to share around the table.",
-    image: "/images/restaurant/sushi-rolls.webp",
+      "Fresh salmon sashimi, sushi rolls, seafood starters, and shareable bites for the table.",
+    image: newUploadPhotos.salmonSashimi,
   },
   {
-    title: "Fruits",
+    title: "Fruits, drinks & sweets",
     description:
-      "Fresh fruit and lighter selections to keep the table bright between savory bites.",
-    image: "/images/restaurant/fruit-bar.webp",
+      "Fresh fruit, colorful drinks, ice cream, and sweets to keep the table bright between savory bites.",
+    image: newUploadPhotos.drinksDesserts,
   },
 ];
 
@@ -45,7 +45,7 @@ export default function MenuPage() {
         eyebrow="Our way, our menu"
         title="Build the meal you came for"
         description="Choose your broth, load the grill, mix your sauce, and keep the table moving."
-        image="/images/restaurant/table-spread.webp"
+        image={newUploadPhotos.hotpotPlatter}
       />
 
       <section className="content-section content-width">
@@ -60,9 +60,14 @@ export default function MenuPage() {
         <div className="soup-grid">
           {soupBases.map((soup) => (
             <article className="soup-item" key={soup.name}>
+              {soup.image ? (
+                <img className="soup-item-image" src={siteAsset(soup.image)} alt="" />
+              ) : null}
+              <div className="soup-item-copy">
               <h3>{soup.name}</h3>
               <p>{soup.description}</p>
               {soup.note ? <strong>{soup.note}</strong> : null}
+              </div>
             </article>
           ))}
         </div>
@@ -72,7 +77,7 @@ export default function MenuPage() {
         <div className="content-width">
           <div className="section-heading">
             <p className="eyebrow">Around the table</p>
-            <h2>Grill, sides, sushi & fruit</h2>
+            <h2>Grill, sides, sushi, fruit & drinks</h2>
             <p className="menu-note">
               Beverages are available à la carte and are not part of the
               all-you-can-eat menu.

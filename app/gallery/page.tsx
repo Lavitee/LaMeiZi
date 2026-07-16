@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-import { galleryPhotos, siteAsset } from "../site-data";
+import { galleryPhotos, newUploadPhotos, siteAsset } from "../site-data";
 
 export const dynamic = "force-static";
 
@@ -18,7 +18,7 @@ export default function GalleryPage() {
         eyebrow="Inside LaMeiZi"
         title="Come hungry. Leave happy."
         description="A look at the buffet, hotpot, grill, starters, and the food we share around the table."
-        image="/images/restaurant/dining-room.webp"
+        image={newUploadPhotos.diningRoom}
       />
 
       <section className="gallery-section content-width">

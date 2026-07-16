@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 import {
   directionsUrl,
+  newUploadPhotos,
   phoneDisplay,
   phoneUrl,
-  yelpUrl,
 } from "../site-data";
+import { ReserveLink } from "../reserve-link";
 
 export const dynamic = "force-static";
 
@@ -23,7 +24,7 @@ export default function VisitPage() {
         eyebrow="Visit LaMeiZi in Tampa"
         title="Your table is waiting near USF"
         description="Gather around all-you-can-eat hotpot and Korean BBQ, open daily from noon until midnight."
-        image="/images/restaurant/dining-room.webp"
+        image={newUploadPhotos.exterior}
       />
 
       <section className="visit-layout content-width">
@@ -35,9 +36,9 @@ export default function VisitPage() {
             <a className="button primary" href={directionsUrl}>
               Get Directions
             </a>
-            <a className="button outline" href={yelpUrl}>
+            <ReserveLink className="button outline">
               Reserve a Table
-            </a>
+            </ReserveLink>
           </div>
         </div>
         <div className="visit-details">
@@ -53,6 +54,23 @@ export default function VisitPage() {
             <a href={phoneUrl}>{phoneDisplay}</a>
           </article>
         </div>
+      </section>
+
+      <section className="visit-photo-strip content-width" aria-label="LaMeiZi restaurant photos">
+        <figure>
+          <img
+            src={newUploadPhotos.exteriorAlt}
+            alt="LaMeiZi restaurant entrance in Tampa"
+          />
+          <figcaption>Easy to spot near USF</figcaption>
+        </figure>
+        <figure>
+          <img
+            src={newUploadPhotos.lobby}
+            alt="LaMeiZi lobby with the restaurant logo and panda statue"
+          />
+          <figcaption>Walk in and settle around the table</figcaption>
+        </figure>
       </section>
 
       <section className="arrival-band">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-import { yelpUrl } from "../site-data";
+import { ReserveLink } from "../reserve-link";
+import { newUploadPhotos } from "../site-data";
 
 export const dynamic = "force-static";
 
@@ -25,7 +26,7 @@ export default function PricingPage() {
         eyebrow="All-you-can-eat pricing"
         title="Pick hotpot, BBQ, or enjoy both"
         description="Straightforward pricing for the whole table, with a two-hour dining time."
-        image="/images/restaurant/meat-selection-premium.webp"
+        image={newUploadPhotos.bbqPlatter}
       />
 
       <section className="price-section content-width">
@@ -128,9 +129,9 @@ export default function PricingPage() {
             </div>
           </article>
         </div>
-        <a className="button primary" href={yelpUrl}>
+        <ReserveLink className="button primary">
           Reserve a Table
-        </a>
+        </ReserveLink>
       </section>
       <SiteFooter />
     </main>

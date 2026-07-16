@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
-import { phoneDisplay, phoneUrl, vipTiers } from "../site-data";
+import { newUploadPhotos, phoneDisplay, phoneUrl, vipTiers } from "../site-data";
 import { VipTierSelector } from "../vip-tier-selector";
 
 export const dynamic = "force-static";
@@ -19,7 +19,7 @@ export default function VipPage() {
         eyebrow="Bring the table back"
         title="VIP value for your next meal"
         description="Load your LaMeiZi VIP card, share it with your favorite people, and get more value every time you come back."
-        image="/images/restaurant/signature-table.webp"
+        image={newUploadPhotos.vipCard}
       />
 
       <section className="vip-intro content-width">
