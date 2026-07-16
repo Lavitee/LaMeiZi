@@ -15,13 +15,13 @@ const menuGroups = [
     title: "Korean BBQ",
     description:
       "Marinated meats, premium cuts, seafood, and fresh vegetables grilled at your table.",
-    image: newUploadPhotos.bbqPlatter,
+    image: newUploadPhotos.koreanBbqFeature,
   },
   {
     title: "Hotpot Ingredients",
     description:
       "Fresh meats, seafood, vegetables, noodles, tofu, and house dipping sauces for your broth.",
-    image: newUploadPhotos.hotpotPlatter,
+    image: newUploadPhotos.hotpotIngredientsFeature,
   },
   {
     title: "Sushi & Seafood",

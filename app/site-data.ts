@@ -35,6 +35,8 @@ export const newUploadPhotos = {
   seafoodFeast: "/images/new-uploads/Image_20260716190001_seafood-platter-close.jpg",
   hotpotBbqSeafood: "/images/new-uploads/Image_20260716190002_hotpot-bbq-seafood-spread.jpg",
   crawfishOysters: "/images/new-uploads/Image_20260716190003_crawfish-oysters.jpg",
+  koreanBbqFeature: "/images/new-uploads/Image_20260716190004_korean-bbq-feature.jpg",
+  hotpotIngredientsFeature: "/images/new-uploads/Image_20260716190005_hotpot-ingredients-feature.jpg",
   hotpotPlatter: "/images/new-uploads/Image_20260716170000_food-table-spread.jpg",
   seafoodPlatter: "/images/new-uploads/Image_20260715150607_462_568.jpg",
   exterior: "/images/new-uploads/Image_20260715150612_465_568.jpg",
@@ -146,9 +148,9 @@ export const galleryPhotos = [
     caption: "Marinated meats & seafood",
   },
   {
-    src: newUploadPhotos.meatPlatter,
-    alt: "Korean BBQ meat rolls, seafood, tofu, and mushrooms",
-    caption: "Ready for the grill",
+    src: newUploadPhotos.sushiRolls,
+    alt: "Sushi rolls prepared for the LaMeiZi table",
+    caption: "Sushi rolls",
   },
   {
     src: newUploadPhotos.hotpotPlatter,
