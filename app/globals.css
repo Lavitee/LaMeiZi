@@ -927,92 +927,11 @@ h3 {
   width: 100%;
 }
 
-.gallery-photo-trigger {
-  background: transparent;
-  border: 0;
-  cursor: zoom-in;
+.gallery-photo-image {
   display: block;
   height: calc(100% - 34px);
-  padding: 0;
-  width: 100%;
-}
-
-.gallery-photo-trigger img {
-  display: block;
-  height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-.gallery-photo-trigger:focus-visible {
-  outline: 3px solid var(--red);
-  outline-offset: 4px;
-}
-
-.gallery-lightbox {
-  align-items: center;
-  display: grid;
-  inset: 0;
-  justify-items: center;
-  padding: 24px;
-  position: fixed;
-  z-index: 20;
-}
-
-.gallery-lightbox-scrim {
-  background: rgba(10, 8, 7, 0.92);
-  border: 0;
-  cursor: zoom-out;
-  inset: 0;
-  padding: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.gallery-lightbox-content {
-  align-items: center;
-  display: grid;
-  gap: 10px;
-  max-height: calc(100vh - 48px);
-  max-width: min(1120px, 100%);
-  position: relative;
-  z-index: 1;
-}
-
-.gallery-lightbox-content img {
-  height: auto;
-  max-height: calc(100vh - 100px);
-  max-width: 100%;
-  object-fit: contain;
-  width: auto;
-}
-
-.gallery-lightbox-content p {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 850;
-  margin: 0;
-}
-
-.gallery-lightbox-close {
-  align-items: center;
-  background: #fff;
-  border: 0;
-  border-radius: 50%;
-  color: var(--ink);
-  cursor: pointer;
-  display: grid;
-  font-size: 28px;
-  height: 42px;
-  justify-self: end;
-  line-height: 1;
-  padding: 0 0 3px;
-  width: 42px;
-}
-
-.gallery-lightbox-close:focus-visible {
-  outline: 3px solid #ffe09a;
-  outline-offset: 4px;
 }
 
 .visit-photo-strip {
