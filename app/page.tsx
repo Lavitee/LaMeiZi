@@ -22,8 +22,8 @@ export default function Home() {
       >
         <img
           className="home-hero-image"
-          src={siteAsset("/images/restaurant/homepage-hero.webp")}
-          alt="LaMeiZi hotpot, barbecue, seafood, and fresh ingredients"
+          src={siteAsset(newUploadPhotos.seafoodPlatter)}
+          alt="Fresh seafood and hotpot ingredients at LaMeiZi"
           fetchPriority="high"
         />
         <div className="home-hero-copy">
