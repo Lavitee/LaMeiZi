@@ -27,7 +27,7 @@ const menuGroups = [
     title: "Sushi & Seafood",
     description:
       "Fresh salmon sashimi, sushi rolls, seafood starters, and shareable bites for the table.",
-    image: newUploadPhotos.salmonSashimi,
+    image: newUploadPhotos.seafoodFeast,
   },
   {
     title: "Fruits, drinks & sweets",

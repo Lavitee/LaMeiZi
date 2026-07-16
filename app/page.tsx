@@ -92,15 +92,15 @@ export default function Home() {
 
       <section className="home-gallery-callout">
         <img
-          src={siteAsset(newUploadPhotos.crawfish)}
-          alt="Bright red crawfish prepared for the LaMeiZi table"
+          src={siteAsset(newUploadPhotos.crawfishOysters)}
+          alt="Bright red crawfish, oysters, shrimp, and shellfish prepared for the LaMeiZi table"
         />
         <div>
           <p className="eyebrow">More than the grill</p>
-          <h2>Crawfish, sushi, tea & sweets</h2>
+          <h2>Crawfish, oysters & seafood</h2>
           <p>
-            See the food, dining room, buffet, and table experience before you
-            visit.
+            Bring the table to life with bright seafood, fresh shellfish, sushi,
+            tea, and sweets.
           </p>
           <a className="button dark" href={sitePage("/gallery")}>
             View the Gallery

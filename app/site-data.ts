@@ -32,6 +32,9 @@ export const newUploadPhotos = {
   bbqPlatter: "/images/new-uploads/Image_20260715150554_454_568.jpg",
   meatPlatter: "/images/new-uploads/Image_20260715150558_456_568.jpg",
   seafoodClose: "/images/new-uploads/Image_20260715150601_458_568.jpg",
+  seafoodFeast: "/images/new-uploads/Image_20260716190001_seafood-platter-close.jpg",
+  hotpotBbqSeafood: "/images/new-uploads/Image_20260716190002_hotpot-bbq-seafood-spread.jpg",
+  crawfishOysters: "/images/new-uploads/Image_20260716190003_crawfish-oysters.jpg",
   hotpotPlatter: "/images/new-uploads/Image_20260716170000_food-table-spread.jpg",
   seafoodPlatter: "/images/new-uploads/Image_20260715150607_462_568.jpg",
   exterior: "/images/new-uploads/Image_20260715150612_465_568.jpg",
@@ -154,9 +157,9 @@ export const galleryPhotos = [
     className: "gallery-wide",
   },
   {
-    src: newUploadPhotos.seafoodClose,
-    alt: "Salmon, fish balls, vegetables, and mushrooms for hotpot",
-    caption: "Seafood selection",
+    src: newUploadPhotos.hotpotBbqSeafood,
+    alt: "Hotpot, grilled meats, crab, oysters, and seafood prepared for the table",
+    caption: "Hotpot & seafood spread",
   },
   {
     src: newUploadPhotos.exterior,
