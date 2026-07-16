@@ -36,6 +36,7 @@ export const newUploadPhotos = {
   seafoodPlatter: "/images/new-uploads/Image_20260715150607_462_568.jpg",
   exterior: "/images/new-uploads/Image_20260715150612_465_568.jpg",
   exteriorAlt: "/images/new-uploads/Image_20260715150614_466_568.jpg",
+  nightExterior: "/images/new-uploads/Image_20260716180000_night-exterior.jpg",
   logoWall: "/images/new-uploads/Image_20260715150615_467_568.jpg",
   lobby: "/images/new-uploads/Image_20260715150620_469_568.jpg",
   privateRoom: "/images/new-uploads/Image_20260715150621_470_568.jpg",

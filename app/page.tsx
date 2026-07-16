@@ -1,5 +1,6 @@
 import { SiteFooter, SiteHeader } from "./site-shell";
 import { ReserveLink } from "./reserve-link";
+import { HomeHeroImage } from "./home-hero-image";
 import {
   directionsUrl,
   phoneDisplay,
@@ -20,11 +21,9 @@ export default function Home() {
         className="home-hero"
         aria-label="LaMeiZi Hot Pot and BBQ"
       >
-        <img
-          className="home-hero-image"
-          src={siteAsset("/images/restaurant/homepage-hero.webp")}
-          alt="LaMeiZi hotpot, barbecue, seafood, and fresh ingredients"
-          fetchPriority="high"
+        <HomeHeroImage
+          daySrc={siteAsset(newUploadPhotos.exterior)}
+          nightSrc={siteAsset(newUploadPhotos.nightExterior)}
         />
         <div className="home-hero-copy">
           <p className="eyebrow">Tampa all-you-can-eat hotpot & barbecue</p>
