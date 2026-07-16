@@ -34,7 +34,7 @@ export function VipTierSelector({
           return (
             <button
               aria-selected={selected}
-              className="vip-tier"
+              className={`vip-tier${selected ? " is-selected" : ""}`}
               key={tier.amount}
               onClick={() => setSelectedAmount(tier.amount)}
               role="option"
